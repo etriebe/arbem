@@ -182,7 +182,7 @@ namespace arbem
                 {
                     daysToOffset += 7;
                 }
-                return currentTime.AddDays(daysToOffset);
+                return currentTime.AddDays(daysToOffset + 1);
             }
         }
 
@@ -193,7 +193,8 @@ namespace arbem
                     out response,
                     "https://www.officefootballpool.com/members.cfm?p=1",
                     cookieContainer,
-                    @$"login=1&username={username}&password={password}&useSavedPwd=1&yes=1&login=&gotopage=index.cfm&poolid=&entrykey=&suppressAlerts=0"))
+                    username,
+                    password))
             {
                 return true;
             }

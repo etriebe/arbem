@@ -55,7 +55,6 @@ public static class WebUtils
         public static bool OfficeFootballPoolLoginPostRequest(out HttpWebResponse response,
             string url,
             CookieContainer cookieContainer,
-            string postBody,
             string username,
             string password)
         {
